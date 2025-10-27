@@ -77,6 +77,21 @@
 
          // -mi creo la Funzione Principale per il Caricamento da API con Fallback
         function loadGalleryFromAPI() {
-
+            //-- mi creo il fetch che mi richiama l'url per poter vedere se ci stanno errori e se il API funziona perfettamente
+             fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Errore API: ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(photos => {
+                renderGallery(photos);
+            })
+            .catch(error => {
+                console.error('API non disponibile. Carico dati locali.', error);
+                galleryContainer.innerHTML = '<p style="text-align: center; color: orange; font-size: 1.2rem; padding: 10px;">Attenzione: Caricamento dati di fallback locali.</p>';
+                renderGallery(localPhotoData); 
+            });
         }
     });
