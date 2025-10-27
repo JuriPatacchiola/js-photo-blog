@@ -24,7 +24,7 @@ h1{
     font-style: italic; 
     color:black; 
     background-image: url(/assets/img/wall.png);
-    width: 100%;
+    background-size: auto; 
 }
 
 .container_card_grid {
@@ -32,11 +32,8 @@ h1{
     grid-template-columns: repeat(3, 1fr);
     gap: 40px; 
     background-image: url(/assets/img/cork.png); 
-    background-size: cover; 
-    padding-top: 40px;
-    padding-left: 240px;
-    padding-right: 240px;
-    padding-bottom: 40px;
+    background-size: contain; 
+    padding: 40px 100px;
     width: 100%;
     margin: 0 auto; 
 }
@@ -93,4 +90,52 @@ h1{
     font-weight: 700; 
     text-transform: uppercase; 
     color: var(--color-text-primary);
+}
+
+@media (max-width: 1024px) {
+    
+    .container_card_grid {
+
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 80px; 
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+    
+    .title {
+        font-size: 20px;
+    }
+    
+    .date {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .container_card_grid {
+        grid-template-columns: 1fr;
+        padding: 80px; 
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 80px;
+        padding: 20px 10px;
+    }
+
+    .card_photo {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+    
+    .date {
+        font-size: 0.7rem;
+    }
 }
