@@ -94,4 +94,7 @@
                 renderGallery(localPhotoData); 
             });
         }
+
+        // - aggiungo per concludere l'Esecuzione
+        loadGalleryFromAPI(); 
     });
