@@ -47,5 +47,16 @@
         titleP.classList.add('title');
         titleP.textContent = photo.title;
 
+
+        //--creo i child per richiamre il nodo principale attraverso l'elelemto che ho creato
+        textContent.appendChild(dateP);
+        textContent.appendChild(titleP);
+        card.appendChild(img);
+        card.appendChild(pin);
+        card.appendChild(textContent);
+
+        return card; 
+
     }
+
     });
