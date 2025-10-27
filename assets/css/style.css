@@ -1,24 +1,88 @@
-*{
+/* style.css (Senza Media Query Desktop) */
+
+* {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box; 
 }
 
 :root{
     --font-primary: "Edu TAS Beginner", cursive;
-    --font-secondary:"Sometype Mono", monospace;
+    --font-secondary: "Sometype Mono", monospace;
     --color-text-primary: #000;
+    --card-padding: 15px;  
+}
+
+body {
+    background-color: #f0f0f0; 
 }
 
 h1{
     text-align: center;
-    background-image: url(/assets/img/wall.png);
-    padding: 40px;
+    padding: 40px 20px 20px 20px; 
     font-family: var(--font-secondary);
-    font-size: 80px;
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-style: italic; 
+    color: var(--color-text-primary); 
+    background-image: url(/assets/img/wall.png);
 }
 
-.container_card_grid{
+
+.container_card_grid {
     display: grid;
-    grid-template-columns: 3fr;
+    grid-template-columns: repeat(3, 1fr);;
+    gap: 20px; 
+    background-image: url(/assets/img/cork.png); 
+    background-size: cover; 
+    padding-left: 160px; 
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 100px;
+    width: 100%;
+    margin: 0 auto; 
+    justify-content: center;
     align-items: center;
 }
+
+
+.card_photo {
+    background-color: white;
+    padding: var(--card-padding);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15), 0 8px 18px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    border: 1px solid #e0e0e0; 
+}
+
+
+.photo_img {
+    width: 100%; 
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+.pin {
+    position: absolute;
+    top: -15px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px; 
+    height: 40px;
+    z-index: 10; 
+}
+
+
+.text {
+    margin-top: 15px;
+    font-family: var(--font-primary);
+    text-align: left; 
+    font-size: 22px;
+    line-height: 1.4;
+    color: #555;
+    width: 100%; 
+}
+
