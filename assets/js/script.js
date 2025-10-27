@@ -75,5 +75,8 @@
 
         }
 
-      
+         // -mi creo la Funzione Principale per il Caricamento da API con Fallback
+        function loadGalleryFromAPI() {
+
+        }
     });
