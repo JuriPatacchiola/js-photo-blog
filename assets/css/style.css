@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --font-primary: "Edu TAS Beginner", cursive;
+    --font-secondary:"Sometype Mono", monospace;
+    --color-text-primary: #000;
+}
+
+h1{
+    text-align: center;
+    background-image: url(/assets/img/wall.png);
+    padding: 40px;
+    font-family: var(--font-secondary);
+    font-size: 80px;
+}
+
