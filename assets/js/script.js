@@ -21,4 +21,31 @@
         {"id": 6, "url": "https://marcolanci.it/boolean/assets/pictures/6.png", "date": "30-08-2024", "title": "RIVIERA"}
     ];
 
+     // - mi creo la Funzione per creare la Singola Card
+    function createPhotoCard(photo) {
+        //-- creo gli elementi che mi servono dentro la card
+        const card = document.createElement('div');
+        card.classList.add('card_photo');
+        
+        const img = document.createElement('img');
+        img.classList.add('photo_img');
+        img.src = photo.url;        
+        img.alt = photo.title;
+
+        const pin = document.createElement('img');
+        pin.classList.add('pin');
+        pin.src = './assets/img/pin.svg';
+        
+        const textContent = document.createElement('div');
+        textContent.classList.add('text_content');
+        
+        const dateP = document.createElement('p');
+        dateP.classList.add('date');
+        dateP.textContent = photo.date; 
+        
+        const titleP = document.createElement('p');
+        titleP.classList.add('title');
+        titleP.textContent = photo.title;
+
+    }
     });
