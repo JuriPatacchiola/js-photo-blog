@@ -58,5 +58,7 @@
         return card; 
 
     }
-
+  // - mi creo la Funzione per il Rendering della Galleria 
+        function renderGallery(photosArray) {
+        }
     });
