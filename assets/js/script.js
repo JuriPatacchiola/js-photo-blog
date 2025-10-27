@@ -60,5 +60,20 @@
     }
   // - mi creo la Funzione per il Rendering della Galleria 
         function renderGallery(photosArray) {
+          // -- faccio un Ciclo for classico 
+            for (let i = 0; i < photosArray.length; i++) {
+                
+                // --ottengo  l'elemento foto corrente usando l'indice i
+                const photo = photosArray[i];
+                
+                // -- richiamo la funzione di creazione per la foto 
+                const newCard = createPhotoCard(photo);
+                
+                // -- inserisco la card nel contenitore della griglia che avevo all'inizio come nuova card
+                galleryContainer.appendChild(newCard);
+            }
+
         }
+
+      
     });
