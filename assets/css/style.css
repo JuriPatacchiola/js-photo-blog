@@ -17,3 +17,8 @@ h1{
     font-size: 80px;
 }
 
+.container_card_grid{
+    display: grid;
+    grid-template-columns: 3fr;
+    align-items: center;
+}
