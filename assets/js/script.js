@@ -3,11 +3,11 @@
     - Argomento principale / Azione / Funzione
     -- Argomento secondario / Ragionamento interno
  */
-//-creo il docunet con  addeventlistener per crearmi l'evento principaleche terra dentro tutte le funzioni e elementi
+//-creo il docunet con  addeventlistener per crearmi l'evento principaleche terra dentro tutte le funzioni e gli elementi
 
     document.addEventListener('DOMContentLoaded', () => {
 
-    // - qui mi riprendo i Riferimenti della  DOM che sno sia variabili che costanti
+    // - qui mi riprendo i Riferimenti della  DOM che sono sia variabili che costanti
     const galleryContainer = document.getElementById('photo-gallery'); 
     const lightbox = document.getElementById('lightbox');
     const modalImage = document.getElementById('modal-image');
@@ -15,7 +15,7 @@
     // -- aggiungo il nuovo: Riferimento attraverso il tag <body> per bloccare lo scroll
     const body = document.body; 
 
-    // - prendo i riferimenti per l'url che ho usato dentro postman e il ID per il griled 
+    // - prendo i riferimenti per l'url che ho usato dentro postman e il ID 
     const apiUrl = 'https://lanciweb.github.io/demo/api/pictures/';
 
     // -- qui aggiungo anche la nuova classe css per lo scroll e hidden
@@ -29,7 +29,7 @@
         modalImage.src = imageUrl;
         modalImage.alt = title;
         
-        // -- riciamo il overlay 
+        // -- richiamo l' overlay 
         lightbox.classList.remove(HIDDEN_CLASS);
         
         // -- qui aggiungo il Blocca scorrimento
