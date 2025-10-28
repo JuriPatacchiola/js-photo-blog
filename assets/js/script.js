@@ -25,7 +25,7 @@
 
     // - mi creo la funziona per prendere l'immagine che mi interessa e attivare l'overlay e per il blocco scroll
     function openModal(imageUrl, title) {
-         // --prendo la immagine nel modal
+         // -- prendo la immagine nel modal
         modalImage.src = imageUrl;
         modalImage.alt = title;
         
@@ -35,6 +35,11 @@
         // -- qui aggiungo il Blocca scorrimento
         body.classList.add(MODAL_OPEN_CLASS);
      }
+
+      // - mi creo la  Funzione inversa 
+    function closeModal() {
+       
+    }
 
      // - prendo i Dati Locali (che sono all'interno del link che ho usato denro postman )
     const localPhotoData = [
