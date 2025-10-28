@@ -6,7 +6,7 @@
 //-creo il docunet con  addeventlistener per crearmi l'evento principaleche terra dentro tutte le funzioni e elementi
 
     document.addEventListener('DOMContentLoaded', () => {
-        
+
     // - qui mi riprendo i Riferimenti della  DOM che sno sia variabili che costanti
     const galleryContainer = document.getElementById('photo-gallery'); 
     const lightbox = document.getElementById('lightbox');
@@ -15,8 +15,13 @@
     // -- aggiungo il nuovo: Riferimento attraverso il tag <body> per bloccare lo scroll
     const body = document.body; 
 
-        // - prendo i riferimenti per l'url che ho usato dentro postman e il ID per il griled 
+    // - prendo i riferimenti per l'url che ho usato dentro postman e il ID per il griled 
     const apiUrl = 'https://lanciweb.github.io/demo/api/pictures/';
+
+    // -- qui aggiungo anche la nuova classe css per lo scroll e hidden
+    const MODAL_OPEN_CLASS = 'modal-open'; 
+    const HIDDEN_CLASS = 'hidden';
+
 
      // - prendo i Dati Locali (che sono all'interno del link che ho usato denro postman )
     const localPhotoData = [
