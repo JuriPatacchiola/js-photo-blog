@@ -24,7 +24,10 @@ h1{
     font-style: italic; 
     color:black; 
     background-image: url(/assets/img/wall.png);
-    background-size: auto; 
+    background-size: auto;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 .container_card_grid {
@@ -33,9 +36,10 @@ h1{
     gap: 40px; 
     background-image: url(/assets/img/cork.png); 
     background-size: contain; 
-    padding: 40px 100px;
+    padding: 200px 100px;
     width: 100%;
     margin: 0 auto; 
+    top: 40px;
 }
 
 .card_photo {
@@ -46,9 +50,14 @@ h1{
     flex-direction: column;
     position: relative; 
     border: 1px solid #e0e0e0; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-
+.card_photo:hover{
+    transform: scale(1.05) rotate(10deg);
+     z-index: 10;
+}
 .photo_img {
     width: 100%; 
     aspect-ratio: 1 / 1; 
@@ -68,7 +77,13 @@ h1{
     z-index: 10; 
 }
 
-
+.card_photo .pin{
+     transition: opacity 0.3s ease-in-out; 
+     opacity: 1;
+}
+.card_photo:hover .pin {
+    opacity: 0;
+}
 .text_content {
     margin-top: 15px;
     width: 100%;
@@ -147,7 +162,7 @@ h1{
     margin-bottom: 20px;
     position: absolute;
     top: -60px;
-    right: 390px;
+    right: 350px;
     font-family: var(--font-secondary);
 }
 
@@ -161,7 +176,7 @@ body.modal-open {
     .container_card_grid {
 
         grid-template-columns: repeat(2, 1fr);
-        padding: 40px 80px; 
+        padding: 200px 80px; 
         gap: 20px;
     }
 
@@ -182,7 +197,7 @@ body.modal-open {
     
     .container_card_grid {
         grid-template-columns: 1fr;
-        padding: 80px; 
+        padding: 200px 80px; 
         gap: 20px;
     }
 

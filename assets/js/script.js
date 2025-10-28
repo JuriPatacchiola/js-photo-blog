@@ -99,9 +99,9 @@
         return card; 
 
     }
-  // - mi creo la Funzione per il Rendering della Galleria 
+        // - mi creo la Funzione per il Rendering della Galleria 
         function renderGallery(photosArray) {
-          // -- faccio un Ciclo for classico 
+            // -- faccio un Ciclo for classico 
             for (let i = 0; i < photosArray.length; i++) {
                 
                 // --ottengo  l'elemento foto corrente usando l'indice i
@@ -118,6 +118,7 @@
 
          // -mi creo la Funzione Principale per il Caricamento da API con Fallback
         function loadGalleryFromAPI() {
+
             //-- mi creo il fetch che mi richiama l'url per poter vedere se ci stanno errori e se il API funziona perfettamente
              fetch(apiUrl)
             .then(response => {
