@@ -38,7 +38,10 @@
 
       // - mi creo la  Funzione inversa 
     function closeModal() {
-       
+        
+        lightbox.classList.add(HIDDEN_CLASS);
+        
+        body.classList.remove(MODAL_OPEN_CLASS);
     }
 
      // - prendo i Dati Locali (che sono all'interno del link che ho usato denro postman )
