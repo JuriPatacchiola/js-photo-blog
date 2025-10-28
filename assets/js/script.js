@@ -22,10 +22,18 @@
     const MODAL_OPEN_CLASS = 'modal-open'; 
     const HIDDEN_CLASS = 'hidden';
 
-    
-    // - mi creo la funziona per creare l'eventclick per prendere l'immagine che mi interessa
-    function openModal(imageUrl, title) {
 
+    // - mi creo la funziona per prendere l'immagine che mi interessa e attivare l'overlay e per il blocco scroll
+    function openModal(imageUrl, title) {
+         // --prendo la immagine nel modal
+        modalImage.src = imageUrl;
+        modalImage.alt = title;
+        
+        // -- riciamo il overlay 
+        lightbox.classList.remove(HIDDEN_CLASS);
+        
+        // -- qui aggiungo il Blocca scorrimento
+        body.classList.add(MODAL_OPEN_CLASS);
      }
 
      // - prendo i Dati Locali (che sono all'interno del link che ho usato denro postman )
