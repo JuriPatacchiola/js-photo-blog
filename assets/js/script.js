@@ -46,7 +46,7 @@
 
       // - mi creo un Event Listener per chiudere con il bottone che ho nel html
     closeModalButton.addEventListener('click', closeModal);
-    
+
 
      // - prendo i Dati Locali (che sono all'interno del link che ho usato denro postman )
     const localPhotoData = [
@@ -84,6 +84,10 @@
         titleP.classList.add('title');
         titleP.textContent = photo.title;
 
+         // - creo un Event Listener di click sulla foto che è presente nella modal principale
+        img.addEventListener('click', () => {
+            openModal(photo.url, photo.title);
+        });
 
         //--creo i child per richiamre il nodo principale attraverso l'elelemto che ho creato
         textContent.appendChild(dateP);
