@@ -22,6 +22,11 @@
     const MODAL_OPEN_CLASS = 'modal-open'; 
     const HIDDEN_CLASS = 'hidden';
 
+    
+    // - mi creo la funziona per creare l'eventclick per prendere l'immagine che mi interessa
+    function openModal(imageUrl, title) {
+
+     }
 
      // - prendo i Dati Locali (che sono all'interno del link che ho usato denro postman )
     const localPhotoData = [
