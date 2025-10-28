@@ -44,6 +44,10 @@
         body.classList.remove(MODAL_OPEN_CLASS);
     }
 
+      // - mi creo un Event Listener per chiudere con il bottone che ho nel html
+    closeModalButton.addEventListener('click', closeModal);
+    
+
      // - prendo i Dati Locali (che sono all'interno del link che ho usato denro postman )
     const localPhotoData = [
         {"id": 1, "url": "https://marcolanci.it/boolean/assets/pictures/1.png", "date": "01-07-2024", "title": "SKATE PARK"},
